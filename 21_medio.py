@@ -1,9 +1,8 @@
 import random
-
 class Inicio():
-    print("|---------------------------------------|")
-    print("| Seja bem-vindo ao jogo de cartas 21!  |")
-    print("|---------------------------------------|")
+    print("|-----------------------------|")
+    print("| Seja bem-vindo ao jogo 21!  |")
+    print("|-----------------------------|")
     print("REGRAS:")
     print("* 1. O objetivo do jogo é chegar ao 21")
     print("* 2. Ganha quem completar 21 ou chegar mais próximo")
@@ -70,9 +69,9 @@ class Jogo():
                 else:
                     break
 
-    def verificar_vencedor(self):
+    def verificar_vencedor(self, vencedor):
+        self.__vencedor = None
         pontuacoes = [sum(jogador.get_cartas()) for jogador in self.__jogadores]
-        vencedor = None
         pontuacao_vencedor = 0
 
         for i in range(len(self.__jogadores)):
@@ -100,4 +99,3 @@ jogo = Jogo(jogador1, jogador2)
 ganhador = Jogo(jogador1, jogador2)
 jogo.set_jogar()
 jogo.verificar_vencedor()
-

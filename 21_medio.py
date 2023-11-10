@@ -18,6 +18,7 @@ class Jogadores():
         self.__fichas = 60
         self.__cartas = []
 
+@property
     def get_jogador(self):
         return self.__jogador
 
